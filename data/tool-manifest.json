@@ -1,0 +1,15 @@
+{
+  "name": "codex-research-cli-toolkit",
+  "platform": "windows",
+  "profiles": {
+    "core": ["scoop", "uv", "git", "git-lfs", "gh", "nodejs-lts", "ripgrep", "fd", "fzf", "bat", "delta", "just", "hyperfine", "pixi"],
+    "writing": ["zotero", "pandoc", "quarto", "typst", "tectonic", "vale", "languagetool", "languagetool-java", "manubot", "doi2bib", "codespell", "cspell"],
+    "pdf": ["poppler", "qpdf", "tesseract", "ocrmypdf", "imagemagick", "ghostscript"],
+    "data": ["duckdb", "sqlite", "jq", "yq", "qsv", "miller", "rclone", "dvc", "huggingface_hub", "kaggle", "mlflow", "wandb", "marimo", "papermill", "jupytext", "nbqa"],
+    "materials": ["pymatgen", "ase", "custodian", "phonopy", "sumo", "pyprocar", "openbabel"],
+    "rjulia": ["r", "radian", "julia"],
+    "quality": ["ruff", "black", "pre-commit", "pyright"],
+    "diagrams": ["openjdk", "graphviz", "plantuml", "mermaid-cli"]
+  },
+  "mcp_servers": ["paper-search", "tooluniverse", "zotero", "context7", "playwright", "exa_optional"]
+}
