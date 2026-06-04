@@ -33,6 +33,41 @@ powershell -ExecutionPolicy Bypass -File .\scripts\verify.ps1
 
 Restart Codex after MCP setup so the new servers are discovered.
 
+## Deploy Directly From Codex
+
+If you are using Codex Desktop or Codex CLI on Windows, you can ask Codex to run the deployment for you.
+
+Paste this into a Codex chat:
+
+```text
+Clone and deploy this toolkit:
+
+https://github.com/Yang1Bai/codex-research-cli-toolkit
+
+Please run:
+1. git clone https://github.com/Yang1Bai/codex-research-cli-toolkit.git
+2. cd codex-research-cli-toolkit
+3. powershell -ExecutionPolicy Bypass -File .\scripts\install-windows.ps1 -All
+4. powershell -ExecutionPolicy Bypass -File .\scripts\setup-mcp.ps1
+5. powershell -ExecutionPolicy Bypass -File .\scripts\verify.ps1
+
+If a command fails, continue with the next step and summarize what worked.
+```
+
+If you already cloned the repository in a Codex workspace, ask Codex:
+
+```text
+Deploy this repository on my machine. Run the Windows installer, configure Codex MCP servers, then run the verifier and summarize the result.
+```
+
+For a safer preview first:
+
+```text
+Run a dry-run deployment for this repository. Use install-windows.ps1 -All -DryRun and setup-mcp.ps1 -DryRun, then tell me what would be installed.
+```
+
+After deployment, restart Codex or open a new Codex session. MCP servers are read at session startup, so newly added servers may not appear in the current session immediately.
+
 ## Safer Dry Run
 
 Preview what would be installed:
