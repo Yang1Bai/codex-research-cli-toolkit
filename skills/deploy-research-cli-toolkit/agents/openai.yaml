@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deploy Research CLI Toolkit"
+  short_description: "Deploy a Windows-first Codex research CLI and MCP toolkit."
+  default_prompt: "Deploy the Codex research CLI toolkit on this Windows machine, configure MCP servers, and verify the setup."

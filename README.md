@@ -68,6 +68,28 @@ Run a dry-run deployment for this repository. Use install-windows.ps1 -All -DryR
 
 After deployment, restart Codex or open a new Codex session. MCP servers are read at session startup, so newly added servers may not appear in the current session immediately.
 
+## Use As A Codex Skill
+
+This repository also includes a ready-to-install Codex skill:
+
+```text
+skills/deploy-research-cli-toolkit/
+```
+
+To install it locally, copy that folder into your Codex skills directory:
+
+```powershell
+Copy-Item -Recurse .\skills\deploy-research-cli-toolkit "$env:USERPROFILE\.codex\skills\deploy-research-cli-toolkit"
+```
+
+Restart Codex, then prompt:
+
+```text
+Deploy the Codex research CLI toolkit on this Windows machine, configure MCP servers, and verify the setup.
+```
+
+The skill will prefer the repository scripts over ad hoc commands and will run dry-runs, MCP setup, and verification in the intended order.
+
 ## Safer Dry Run
 
 Preview what would be installed:
